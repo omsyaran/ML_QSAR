@@ -1,0 +1,201 @@
+[System]
+Name='FuzzyQSAR'
+Type='mamdani'
+Version=2.0
+NumInputs=22
+NumOutputs=1
+NumRules=7
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Sp_Max_L'
+Range=[2 6.5]
+NumMFs=3
+MF1='low':'trimf',[-3.5 2 3.5]
+MF2='medium':'trimf',[3 4.25 5.5]
+MF3='large':'trimf',[5 6.5 8]
+
+[Input2]
+Name='nHM'
+Range=[0 12]
+NumMFs=3
+MF1='low':'trimf',[-5 0 5]
+MF2='average':'trimf',[4 6 8]
+MF3='high':'trimf',[7 12 17]
+
+[Input3]
+Name='F04[C-N]'
+Range=[0 36]
+NumMFs=3
+MF1='lower':'trimf',[-15 0 15]
+MF2='higher':'trimf',[20 36 42]
+MF3='medium':'trimf',[10 18 25]
+
+[Input4]
+Name='NssssC'
+Range=[0 13]
+NumMFs=3
+MF1='less':'trimf',[-5 0 5]
+MF2='more':'trimf',[8 13 18]
+MF3='medium':'trimf',[3 6.5 10]
+
+[Input5]
+Name='nCb'
+Range=[0 18]
+NumMFs=3
+MF1='less':'trimf',[-7.5 0 7.5]
+MF2='average':'trimf',[5 9 14]
+MF3='more':'trimf',[10.5 18 25.5]
+
+[Input6]
+Name='n0'
+Range=[0 12]
+NumMFs=3
+MF1='less':'trimf',[-5 0 5]
+MF2='average':'trimf',[3 6 9]
+MF3='more':'trimf',[7 12 17]
+
+[Input7]
+Name='F03[C-N]'
+Range=[0 44]
+NumMFs=3
+MF1='lower':'trimf',[-17 0 17]
+MF2='medium':'trimf',[11 22 35]
+MF3='higher':'trimf',[27 44 61]
+
+[Input8]
+Name='LOC'
+Range=[0 4.5]
+NumMFs=3
+MF1='low':'trimf',[-1.5 0 1.5]
+MF2='medium':'trimf',[1 2.25 3.5]
+MF3='high':'trimf',[3 4.5 6]
+
+[Input9]
+Name='Mi'
+Range=[1 1.4]
+NumMFs=2
+MF1='lower':'trimf',[0.75 1 1.25]
+MF2='higher':'trimf',[1.185 1.4 1.615]
+
+[Input10]
+Name='nArNO2'
+Range=[0 3]
+NumMFs=3
+MF1='smaller':'trimf',[-1 0 1]
+MF2='moderate':'trimf',[0.5 1.5 2.5]
+MF3='larger':'trimf',[2 3 4]
+
+[Input11]
+Name='C'
+Range=[0 61]
+NumMFs=3
+MF1='lower':'trapmf',[-40 0 10 40]
+MF2='higher':'trapmf',[20 50 61 102]
+MF3='moderate':'trimf',[10 30.5 50]
+
+[Input12]
+Name='SpPosA_B(p)'
+Range=[0.8 1.7]
+NumMFs=3
+MF1='smaller':'trimf',[0.45 0.8 1.15]
+MF2='medium':'trimf',[0.9 1.25 1.6]
+MF3='larger':'trimf',[1.35 1.7 2.05]
+
+[Input13]
+Name='nCIR'
+Range=[0 150]
+NumMFs=3
+MF1='small':'trapmf',[-75 0 25 75]
+MF2='larger':'trapmf',[75 125 150 225]
+MF3='moderate':'trimf',[25 75 125]
+
+[Input14]
+Name='B03[C-Cl]'
+Range=[0 1]
+NumMFs=2
+MF1='low':'trimf',[-0.5 0 0.5]
+MF2='high':'trimf',[0.5 1 1.5]
+
+[Input15]
+Name='SpMax_A'
+Range=[1 3]
+NumMFs=3
+MF1='low':'trimf',[0.2 1 1.8]
+MF2='medium':'trimf',[1.4 2 2.6]
+MF3='large':'trimf',[2.2 3 3.8]
+
+[Input16]
+Name='TI2_L'
+Range=[0 18]
+NumMFs=3
+MF1='low':'trimf',[-7 0 7]
+MF2='medium':'trimf',[3 9 15]
+MF3='high':'trimf',[11 18 25]
+
+[Input17]
+Name='C-026'
+Range=[0 12]
+NumMFs=3
+MF1='smaller':'trimf',[-4 0 4.2]
+MF2='moderate':'trimf',[4.1 6 9]
+MF3='larger':'trimf',[8 12 16]
+
+[Input18]
+Name='F02[C-N]'
+Range=[0 18]
+NumMFs=3
+MF1='lower':'trimf',[-6 0 6]
+MF2='medium':'trimf',[4.5 9 15]
+MF3='higher':'trimf',[12 18 24]
+
+[Input19]
+Name='SpMax_B(m)'
+Range=[2 11]
+NumMFs=3
+MF1='low':'trimf',[-1 2 5]
+MF2='medium':'trimf',[3.5 6.5 9.5]
+MF3='large':'trimf',[8 11 14]
+
+[Input20]
+Name='SM6_B(m)'
+Range=[4.5 15]
+NumMFs=3
+MF1='lower':'trimf',[-1 4.5 8]
+MF2='medium':'trimf',[6 9.75 13]
+MF3='higher':'trimf',[12 15 19]
+
+[Input21]
+Name='nArCOOR'
+Range=[0 4]
+NumMFs=2
+MF1='less':'trimf',[-3 0 3]
+MF2='more':'trimf',[2.1 4 5.9]
+
+[Input22]
+Name='nX'
+Range=[0 27]
+NumMFs=3
+MF1='less':'trapmf',[-7.5 0 2 7.5]
+MF2='medium':'trimf',[3.1 13.5 24.7]
+MF3='more':'trapmf',[17 25 27 37]
+
+[Output1]
+Name='experimental_class'
+Range=[0 1]
+NumMFs=2
+MF1='NRB':'trimf',[0 0.25 0.5]
+MF2='RB':'trimf',[0.5 0.75 1]
+
+[Rules]
+0 2 3 3 2 0 2 0 2 3 0 0 2 0 0 0 2 2 3 3 0 2, 1 (1) : 2
+0 3 2 2 3 0 3 0 2 3 0 0 2 0 0 0 3 3 3 3 0 2, 1 (1) : 2
+0 1 1 1 1 0 1 0 1 0 0 0 1 0 0 0 0 1 0 0 1 1, 2 (1) : 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0, 2 (1) : 2
+2 1 1 1 1 1 1 3 1 1 3 2 1 1 2 3 1 0 1 2 1 1, 1 (1) : 1
+3 1 1 1 1 0 1 0 0 1 3 2 1 1 0 0 1 0 0 2 1 1, 1 (1) : 1
+0 1 1 1 0 0 1 0 0 1 3 2 1 1 0 0 1 0 0 2 1 1, 1 (1) : 1
